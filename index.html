@@ -9,6 +9,74 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Syne',sans-serif;}
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px){
+
+  nav{
+    padding:15px 20px;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+
+  nav div{
+    margin-top:10px;
+  }
+
+  nav a{
+    display:inline-block;
+    margin:8px;
+    font-size:14px;
+  }
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    height:auto;
+    padding:120px 20px 40px;
+  }
+
+  .hero img{
+    width:220px;
+    margin-top:30px;
+  }
+
+  .hero h1{
+    font-size:26px;
+  }
+
+  .hero h2{
+    font-size:18px;
+  }
+
+  .btn{
+    display:block;
+    width:100%;
+    margin:10px 0;
+  }
+
+  section{
+    padding:80px 20px;
+  }
+
+  .section-title{
+    font-size:26px;
+    text-align:center;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    padding:18px;
+  }
+
+  input, textarea{
+    font-size:14px;
+  }
+}
 
 body{
   background: linear-gradient(270deg,#0a0a0a,#0f2027,#000);
