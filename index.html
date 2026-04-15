@@ -23,12 +23,12 @@ body{
   100%{background-position:0% 50%;}
 }
 
-/* ===== NAVBAR ===== */
+/* NAV */
 nav{
   position:fixed;
   width:100%;
   top:0;
-  height:80px; /* ✅ FIXED HEIGHT */
+  height:80px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -41,13 +41,13 @@ nav{
 nav a{color:white;text-decoration:none;margin-left:20px;}
 nav a:hover{color:#00f5ff;}
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
   height:100vh;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:100px 60px 0; /* ✅ PREVENT OVERLAP */
+  padding:100px 60px 0; /* FIX */
 }
 
 .hero img{
@@ -70,7 +70,7 @@ nav a:hover{color:#00f5ff;}
   cursor:pointer;
 }
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 section{padding:120px 60px;}
 
 .section-title{font-size:34px;margin-bottom:30px;}
@@ -105,9 +105,8 @@ input,textarea{
 
 footer{text-align:center;padding:30px;opacity:0.6;}
 
-/* ================= MOBILE RESPONSIVE ================= */
-
-@media (max-width: 768px){
+/* MOBILE */
+@media (max-width:768px){
 
   nav{
     height:auto;
@@ -116,9 +115,7 @@ footer{text-align:center;padding:30px;opacity:0.6;}
     text-align:center;
   }
 
-  nav div{
-    margin-top:10px;
-  }
+  nav div{margin-top:10px;}
 
   nav a{
     display:inline-block;
@@ -130,20 +127,12 @@ footer{text-align:center;padding:30px;opacity:0.6;}
     flex-direction:column;
     text-align:center;
     height:auto;
-    padding:160px 20px 40px; /* 🔥 MAIN FIX */
+    padding:160px 20px 40px; /* MAIN FIX */
   }
 
   .hero img{
     width:220px;
     margin-top:30px;
-  }
-
-  .hero h1{
-    font-size:26px;
-  }
-
-  .hero h2{
-    font-size:18px;
   }
 
   .btn{
@@ -152,26 +141,15 @@ footer{text-align:center;padding:30px;opacity:0.6;}
     margin:10px 0;
   }
 
-  section{
-    padding:80px 20px;
-  }
+  section{padding:80px 20px;}
 
   .section-title{
     font-size:26px;
     text-align:center;
   }
 
-  .cards{
-    grid-template-columns:1fr;
-  }
+  .cards{grid-template-columns:1fr;}
 
-  .card{
-    padding:18px;
-  }
-
-  input, textarea{
-    font-size:14px;
-  }
 }
 </style>
 </head>
@@ -201,10 +179,7 @@ footer{text-align:center;padding:30px;opacity:0.6;}
       clean architecture, and solving real-world problems using technology.
     </p>
 
-    <a href="#projects">
-      <button class="btn">View Projects</button>
-    </a>
-
+    <a href="#projects"><button class="btn">View Projects</button></a>
     <a href="PAIDIPELLI_ARUNKUMAR_Resume.pdf" download>
       <button class="btn">Download Resume</button>
     </a>
@@ -213,47 +188,85 @@ footer{text-align:center;padding:30px;opacity:0.6;}
   <img src="ARUN PHOTO.jpg">
 </section>
 
-<!-- REST SAME (NO CHANGES) -->
-
+<!-- ABOUT -->
 <section id="about" class="hidden">
   <h2 class="section-title">About Me</h2>
   <div class="card">
     <p>
-      I am a Computer Science undergraduate with a strong interest in backend development 
-      and system design...
+      I am a Computer Science undergraduate with a strong interest in backend development and system design. 
+      I have hands-on experience building RESTful APIs and working with database-driven applications using Node.js, 
+      Express.js, and MySQL. I enjoy developing scalable systems that handle real-time data efficiently and focus 
+      on writing clean, maintainable code.
     </p>
   </div>
 </section>
 
+<!-- EDUCATION -->
 <section id="education" class="hidden">
   <h2 class="section-title">Education</h2>
   <div class="card">
     <h3>B.Tech in Computer Science Engineering</h3>
-    <p>SR University, Warangal (2023 – 2026)</p>
+    <p>
+      SR University, Warangal (2023 – 2026) <br><br>
+      I have maintained a strong academic performance with a CGPA of 9.12. My coursework includes Data Structures, 
+      DBMS, Operating Systems, and Object-Oriented Programming, which has helped me build a solid technical foundation.
+    </p>
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience" class="hidden">
   <h2 class="section-title">Experience</h2>
   <div class="card">
     <h3>Bluestock Fintech — Software Development Engineer Intern</h3>
-    <p>Duration: May 2025 – June 2025</p>
+    <p>
+      Duration: May 2025 – June 2025 <br><br>
+      During my internship, I worked on a production-grade IPO web application where I developed scalable backend 
+      services using Node.js. I improved system performance by approximately 20% by optimizing API responses and data handling.
+      <br><br>
+      I built secure RESTful APIs to manage IPO data and implemented middleware for validation and error handling, 
+      which significantly improved system reliability and debugging efficiency.
+    </p>
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects" class="hidden">
   <h2 class="section-title">Projects</h2>
   <div class="cards">
-    <div class="card"><h3>Blood Delivery System</h3></div>
-    <div class="card"><h3>Travel Chatbot</h3></div>
+
+    <div class="card">
+      <h3>Real-Time Emergency Blood Delivery System</h3>
+      <p>
+        Technologies Used: Node.js, Express.js, MySQL, Google Maps API <br><br>
+        This project is a full-stack platform that connects blood donors and recipients in real time...
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>AI-Powered Travel Planner Chatbot</h3>
+      <p>
+        Technologies Used: Node.js, Express.js, OpenAI API, Google Maps API <br><br>
+        This project is an AI-driven application that generates optimized travel itineraries...
+      </p>
+    </div>
+
   </div>
 </section>
 
+<!-- ACHIEVEMENTS -->
 <section id="achievements" class="hidden">
   <h2 class="section-title">Achievements</h2>
-  <div class="card"><p>Achievements here...</p></div>
+  <div class="card">
+    <p>
+      • Solved over 300 DSA problems <br><br>
+      • CGPA 9.12 <br><br>
+      • Strong team collaboration during internship
+    </p>
+  </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="hidden">
   <h2 class="section-title">Contact</h2>
   <div class="card">
